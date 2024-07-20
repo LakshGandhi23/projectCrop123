@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-size: 14px;
+  background: url(landing\ page.png) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.collapsible {
+  max-width: 450px;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.collapsible input[type="checkbox"] {
+  display: none;
+}
+
+.collapsible label {
+  position: relative;
+  font-weight: 600;
+  background: yellow;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 15px 0;
+  border-radius: 4px;
+}
+
+.collapsible label::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  background: url(tick.png) no-repeat 0 0;
+  transition: transform 0.3s ease;
+}
+
+.collapsible input[type="checkbox"]:checked + label::after {
+  transform: rotate(90deg);
+}
+
+.collapsible-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+.collapsible input[type="checkbox"]:checked ~ .collapsible-text {
+  max-height: 1000px; /* Adjust as necessary */
+  padding: 10px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-left: 20px;
+}

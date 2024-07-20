@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fffaf5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 14px;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+nav ul {
+  margin-top: 30px;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 25px;
+  padding: 40px;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #487307;
+  padding: 10px;
+}
+
+.nav li a:hover {
+  color: rgb(159, 202, 121);
+  transition: 1s ease-out;
+}
+
+h1 {
+  font-size: 45px;
+  color: #487307;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 5px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 15px; /* Space between items */
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.collapsible {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  overflow: hidden;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+
+.collapsible-label {
+  position: relative;
+  font-weight: 600;
+  background: white;
+  display: block;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.collapsible-label:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.01);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.collapsible-text {
+  display: none;
+  padding: 15px 20px;
+}
+
+.collapsible input[type="checkbox"] {
+  display: none;
+}
+
+.collapsible input[type="checkbox"]:checked ~ .collapsible-text {
+  display: block;
+}
